@@ -163,7 +163,6 @@ $nautilus-item-radius: $window-radius - $space-size;
   }
 
   .nautilus-grid-view {
-
     gridview.view,
     statuspage.view {
       background-color: transparent;
@@ -433,7 +432,7 @@ $nautilus-item-radius: $window-radius - $space-size;
     padding: 0;
 
     #NautilusViewCell {
-      padding: 0;
+      padding: $space-size;
 
       clamp box {
         margin: 0;
@@ -447,6 +446,14 @@ $nautilus-item-radius: $window-radius - $space-size;
 
       .dim-label {
         border-spacing: 0;
+      }
+    }
+
+    &:selected {
+      #NautilusViewCell {
+        .dim-label {
+          color: $primary;
+        }
       }
     }
   }
